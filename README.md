@@ -14,7 +14,9 @@ The following jetpack utils have been used:
  
 # Models
 OffersModel - Basic model of the JSON based offer. Contains all the offers + Batch ID that comes in the JSON.
+
 OfferModel - Basic model of an individual offer contained in the JSON.
+
 OffersDatabaseEntry - Basic model of how an offer would look inside the local Room Database.
  
 # Services
@@ -28,6 +30,7 @@ offersViewModel - View model that provides information to the view when the view
  
 # Views
 MainActivity - A basic activity that stores the reference to the fragment + nav graph
+
 Offers Fragment - A fragment showing the offers that the user has received from the JSON file. Purely just subscribes to the view model and displays the data.
  
 # Development Retrospective
@@ -35,7 +38,11 @@ Over the course of the development of this application, I've learned quite a bit
  
 # Testing functions
 OffersDaoTest - Test responsible for ensuring that DAO for offers was working correctly, this is the first place where I ran into an issue with testing live data.
+
 OffersViewModelTest - Test responsible for ensuring that the view model was behaving in the right way but due to it consisting of almost all live data, I had trouble finding proper documentation or instructions for testing its various methods.
+
 TestUtils - File to store several objects that could be quickly referenced in my testing classes
+
 MainTestRunner - Test runner for my tests, customized to use the Hilt Test App
+
 MainCoroutineRule - Used to ensure that co-routines can be used on my tests.
